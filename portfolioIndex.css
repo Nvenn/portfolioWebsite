@@ -89,6 +89,7 @@ margin-top: 2rem;
 	  "welcome pic"
 	  ;
 	align-items: start;
+	margin-bottom: 2rem;
 }
 @media screen and (max-width: 1200px) {
 	#welcome-section{
@@ -167,24 +168,30 @@ margin-top: 2rem;
 	text-align: center;
 
   }
-
-  #projects-section{
+#projects-section{
+	border-top:5px solid #C7DEFA ;
+	
+	border-bottom:5px solid #C7DEFA ;	
+	padding-top: 10px;
+	
+}
+  #projects-grid{
 	display: grid;
 grid-template-columns: auto auto auto auto;
 grid-gap: 20px;
-  padding: 10px 0px 100px 0px;
+  padding: 10px 0px 50px 0px;
   width:100%;
   justify-content:center;
   
 }
 @media screen and (max-width: 1200px) {
-	#projects-section{
+	#projects-grid{
 		  grid-template-columns: auto auto;
 		  grid-template-rows: auto auto  ;
 	}
 }
 @media screen and (max-width: 600px) {
-	#projects-section{
+	#projects-grid{
 		  grid-template-columns: auto ;
 		  grid-template-rows: auto auto auto auto  ;
 	}
@@ -199,17 +206,39 @@ grid-gap: 20px;
   border-radius: 8px;
   overflow:hidden;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+transition: all 0.1s linear;
+
 }
+.project-grid-item:hover {
+
+	transform: scale(1.05);
+	animation: shake 0.3s;
+	animation-iteration-count: 1;
+  }
+  
+  @keyframes shake {
+	0% { transform: translate(1px, 1px) scale(1.0)  rotate(0deg); }
+	10% { transform: translate(-1px, -2px) scale(1.01)  rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) scale(1.01)  rotate(1deg); }
+	30% { transform: translate(3px, 2px) scale(1.02)  rotate(0deg); }
+	40% { transform: translate(1px, -1px) scale(1.02)  rotate(1deg); }
+	50% { transform: translate(-1px, 2px) scale(1.03)  rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) scale(1.03)  rotate(0deg); }
+	70% { transform: translate(3px, 1px) scale(1.04)  rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) scale(1.04)  rotate(1deg); }
+	90% { transform: translate(1px, 2px) scale(1.05) rotate(0deg); }
+	100% { transform: translate(1px, -2px) scale(1.05) rotate(-1deg); }
+  }
 .project-grid-item-image{
 	width:100%;
 	min-height:55%;
-   height: auto;
-   max-height: 60%;
-   object-fit: cover;
-   overflow:hidden;
-   transform: scale(1, 1);
-   position:absolute;
-    left:0px;
+	height: auto;
+	max-height: 60%;
+	object-fit: cover;
+	overflow:hidden;
+	transform: scale(1, 1);
+	position:absolute;
+	left:0px;
     top:0px;
     z-index:0;
 	box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;;  
@@ -217,41 +246,51 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 
 .project-grid-item-heading{
 	position:absolute;
 	z-index:1;
-	    left:2%;
+	left:2%;
     top:60%;
 	padding:0px;
 	margin:0px;
 	color: white;
 }
-	.project-grid-item-desc{
-			position:absolute;
+.project-grid-item-desc{
+	position:absolute;
 	z-index:1;
-	    left:2%;
+	left:2%;
     top:70%;
 	padding:0px;
 	margin:0px;
 	color: white;}
-	.project-grid-item-type{
-			position:absolute;
+
+.project-grid-item-type{
+	position:absolute;
 	z-index:1;
-	    left:2%;
+	left:2%;
     top:90%;
 	padding:0px;
 	margin:0px;
 	color: white;}
-	.project-grid-item-date{
-			position:absolute;
+
+.project-grid-item-date{
+	position:absolute;
 	z-index:1;
-	    right:2%;
+	right:2%;
     top:90%;
 	padding:0px;
 	margin:0px;
 	color: white;}
-	.project-grid-item-link {
-	         position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1;
+
+.project-grid-item-link {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+	}
+
+	#projects-section #sub-heading{
+		color: white;
+		text-align: center;
+		letter-spacing: 0.089em;
+		width: 100%;
 	}
