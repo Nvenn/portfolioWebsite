@@ -23,6 +23,7 @@ header{
 	   -webkit-transition: all 0.4s ease;
    transition: all 0.4s ease;
    z-index: 1;
+   
 }
 header h1,header h2{
 	line-height: 2;
@@ -41,6 +42,15 @@ nav ul{
 	margin: auto;
 	padding: 0;
 
+	
+	
+}
+nav ul.shrin{
+top: 1rem;
+position: absolute;
+-webkit-transition: all 0.4s ease;
+transition: all 0.4s ease;
+left: 75%;
 	
 	
 }
@@ -312,7 +322,7 @@ transition: all 0.1s linear;
 		transition: all 0.5s ease-in-out;
 		
 	  }
-	  i:hover{
+	  #skills-icons i:hover{
 		  transform: scale(2);
 	  }
 
@@ -321,4 +331,90 @@ transition: all 0.1s linear;
 		  background-color: #112d4e;
 		  width: 100%;
 		  border-top: 5px solid #C7DEFA;
+		  display:grid;
+		  grid-template-columns: auto auto;
 	  }
+
+	  footer p{
+		margin-top:auto;
+		margin-bottom:auto;
+		color: white;
+
+	}
+	.wrapper{
+	  display:grid;
+	  grid-template-columns: auto auto auto;
+	  justify-content: right;
+	  margin-top: 5px ;
+	  margin-right: 50px;
+	}
+	.wrapper .icon{
+	  margin: auto 10px;
+	  cursor:pointer;
+	  display:flex;
+	  align-items:center;
+	  justify-content:center;
+	  flex-direction:column;
+	  position: relative;
+	  z-index:2;
+	}
+	.wrapper .icon span{
+	  position:relative;
+	  z-index:2;
+	  height: 50px;
+	  width: 50px;
+	  display:block;
+	  background: #fff;
+	  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+	  border-radius:40%;
+	  text-align:center;
+	  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+	.wrapper .icon span i{
+	  font-size:25px;
+	  line-height:50px;
+	}
+	
+	
+	
+	
+	.wrapper .instagram span {
+		background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+	color: #fff;
+	}
+	.wrapper .twitter span {
+		background:#46C1F6;
+	color: #fff;
+	}
+	.wrapper .youtube span {
+		background:#de463b;
+	color: #fff;
+	}
+	
+	.wrapper .icon:hover span,
+	.wrapp .icon:hover .tooltip{
+	  text-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+	}
+	.wrapper .icon:hover span{
+	  color: #fff;
+	}
+	.wrapper .instagram:hover span,
+	.wrapper .instagram:hover .tooltip,
+	.wrapper .instagram:hover .tooltip:before{
+	   background:#fff; 
+	   color: #e1306c;
+	}
+		
+	.wrapper .twitter:hover span,
+	.wrapper .twitter:hover .tooltip,
+	.wrapper .twitter:hover .tooltip:before{
+	  background:#fff;
+	  color:#46C1F6;
+	}
+	
+	.wrapper .youtube:hover span,
+	.wrapper .youtube:hover .tooltip,
+	.wrapper .youtube:hover .tooltip:before{
+	  background:#fff;
+	  color:#de463b;
+	}
