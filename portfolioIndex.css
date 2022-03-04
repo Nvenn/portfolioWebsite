@@ -336,12 +336,14 @@ transition: all 0.1s linear;
 	  }
 
 	  footer{
+		  position: relative;
 		  height:100px;
 		  background-color: #112d4e;
 		  width: 100%;
 		  border-top: 5px solid #C7DEFA;
 		  display:grid;
 		  grid-template-columns: auto auto;
+		  bottom: 0;
 	  }
 
 	  footer p{
@@ -426,4 +428,15 @@ transition: all 0.1s linear;
 	.wrapper .youtube:hover .tooltip:before{
 	  background:#fff;
 	  color:#de463b;
+	}
+
+	#contacts{
+		color: white;
+		margin-left: 50px;
+		height: 700px;
+	}
+
+	#contacts i{
+		font-size: 48px;
+		
 	}
