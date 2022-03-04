@@ -25,12 +25,21 @@ header{
    z-index: 1;
    
 }
+#header.fixed{
+	top:0;
+	z-index:100;
+	width: 100%;
+ position: fixed;
+ padding:0px;
+		-webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-align: left;
+}
 header h1,header h2{
 	line-height: 2;
 letter-spacing: 0.089em;
 color: white;
-	   -webkit-transition: all 0.4s ease;
-   transition: all 0.4s ease;
+	   
 
 }
 
@@ -45,12 +54,12 @@ nav ul{
 	
 	
 }
-nav ul.shrin{
-top: 1rem;
+#nav.shrin{
+top: 2rem;
 position: absolute;
 -webkit-transition: all 0.4s ease;
 transition: all 0.4s ease;
-left: 75%;
+left: 70%;
 	
 	
 }

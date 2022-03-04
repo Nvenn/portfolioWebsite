@@ -1,30 +1,23 @@
-window.addEventListener('scroll', scrollFunction);
 
 
-function scrollFunction() {
-    if (document.body.scrollTop > 8 || document.documentElement.scrollTop > 8) {
-      document.getElementById("header").style.padding = "0px";
-       
-    }
-    else{
-        document.getElementById("header").style.padding = "10px";
-      }
-  
-  }
-  
+
+
   
   window.addEventListener('scroll', fixedNav);
   
   
   
   function fixedNav() {
-      var nav = document.getElementsByTagName("header");
-  
+      var nav = document.getElementById("header");
+
       
     if (document.body.scrollTop > 8 || document.documentElement.scrollTop > 8) {   
       nav.classList.add('fixed');
+      document.getElementById("heading").style.marginLeft = "100px"
     } else {
       nav.classList.remove('fixed');    
+      document.getElementById("heading").style.marginLeft = "0"
+
     }
   }
   
@@ -32,14 +25,17 @@ function scrollFunction() {
   
   function shrinkTitle(){
       
-      
-      var navlist = document.getElementsByClassName("nav");
+      var subHeading =document.getElementById("subheading")
+      var navlist = document.getElementById("nav");
         if (document.body.scrollTop > 8 || document.documentElement.scrollTop > 8) {   
-      title.classList.add('shrink');
+    subHeading.style.display = "none";
       navlist.classList.add('shrin');
+      document.body.style.paddingTop = "200px";
+
     } else {
-      title.classList.remove('shrink');    
+        subHeading.style.display = "block";
       navlist.classList.remove('shrin');   
+      document.body.style.paddingTop = "0";
     }
   }
       
